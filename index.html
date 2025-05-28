@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire Verdiane!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            max-width: 500px;
+            animation: cardBounce 1s ease-out;
+        }
+
+        @keyframes cardBounce {
+            0% { transform: scale(0.3) rotate(-10deg); opacity: 0; }
+            50% { transform: scale(1.05) rotate(2deg); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .title {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffa726);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .name {
+            font-size: 2.5em;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .balloons {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0px); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff6b6b;
+            animation: confettiFall 3s linear infinite;
+        }
+
+        .confetti:nth-child(1) { left: 10%; animation-delay: 0s; background: #ff6b6b; }
+        .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; background: #4ecdc4; }
+        .confetti:nth-child(3) { left: 30%; animation-delay: 1s; background: #45b7d1; }
+        .confetti:nth-child(4) { left: 40%; animation-delay: 1.5s; background: #96ceb4; }
+        .confetti:nth-child(5) { left: 50%; animation-delay: 2s; background: #ffa726; }
+        .confetti:nth-child(6) { left: 60%; animation-delay: 0.3s; background: #ff6b6b; }
+        .confetti:nth-child(7) { left: 70%; animation-delay: 0.8s; background: #4ecdc4; }
+        .confetti:nth-child(8) { left: 80%; animation-delay: 1.3s; background: #45b7d1; }
+        .confetti:nth-child(9) { left: 90%; animation-delay: 1.8s; background: #96ceb4; }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .cake {
+            font-size: 4em;
+            margin: 20px 0;
+            animation: cakeWiggle 2s ease-in-out infinite;
+        }
+
+        @keyframes cakeWiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        .sparkles {
+            position: absolute;
+            font-size: 1.5em;
+            color: gold;
+            animation: sparkle 1.5s ease-in-out infinite;
+        }
+
+        .sparkle1 { top: 20%; left: 20%; animation-delay: 0s; }
+        .sparkle2 { top: 30%; right: 20%; animation-delay: 0.5s; }
+        .sparkle3 { bottom: 30%; left: 15%; animation-delay: 1s; }
+        .sparkle4 { bottom: 20%; right: 15%; animation-delay: 1.5s; }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <div class="card">
+        <div class="balloons">🎈🎈🎈</div>
+        <div class="sparkles sparkle1">✨</div>
+        <div class="sparkles sparkle2">✨</div>
+        <div class="sparkles sparkle3">✨</div>
+        <div class="sparkles sparkle4">✨</div>
+        
+        <div class="title">Happy Birthday!</div>
+        <div class="name">Verdiane</div>
+        <div class="cake">🎂</div>
+        <div class="message">
+            Que cette nouvelle année t'apporte<br>
+            joie, bonheur et succès !<br>
+            🎉 Profite bien de ta journée spéciale ! 🎉
+        </div>
+    </div>
+</body>
+</html>
